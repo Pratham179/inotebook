@@ -4,7 +4,9 @@ const About = () => {
   return (
     <div>
       <h1>About Us</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, quam aliquam voluptatum vel minima corrupti eaque maiores illum ea voluptates, dolorum voluptate. Officia necessitatibus sunt possimus quos exercitationem aperiam, cumque rem ea quia? Minus?</p>
+      <h3>Welcome to iNotebook!</h3>
+      <p>You can create personalized notes and save them online and can access it in the world</p>
+      <p>You can create your to-do list</p>
     </div>
   )
 }
