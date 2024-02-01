@@ -1,12 +1,16 @@
 const mongoose = require('mongoose');
-const mongoURI = "mongodb://localhost:27017/inotebook"
 
-const connectToMongo = ()=>{
-    mongoose.connect(mongoURI,()=>{
-        console.log("connected to mongo successfully");
+const connectToMongo = () => {
+    mongoose.connect(process.env.mongoURI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
     })
-}
-mongoose.set('strictQuery', true);
-
+    .then(() => {
+        console.log("Connected to MongoDB Atlas successfully");
+    })
+    .catch((error) => {
+        console.error("Error connecting to MongoDB Atlas:", error);
+    });
+};
 
 module.exports = connectToMongo;
